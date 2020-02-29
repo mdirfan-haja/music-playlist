@@ -4,41 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>music</title>
+
+    <link rel="stylesheet" href="style.css">
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.0/firebase-storage.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.0/firebase-firestore.js"></script>
+
+    <script src="index.js"></script>
 </head>
 
 <body>
 
-    <audio controls id="audio1">
+    <div id="">
+        <p><progress value="0" max="100" id="uploadbar"> 0%</progress></p>
+        <input type="file" value="upload" id="filesbutton"><br>
+        <button onclick="uploadfile()">click</button>
+        <p><audio controls id="audio1">
    <!-- <source src="./audio/music1test.mp3" type="audio/mpeg" >
         <source src="./audio/music1test.mp3" type="audio/mpeg" >-->
-</audio>
-
+</audio></p>
+    </div>
 
 </body>
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyDR-0c96A_yzfmX8jpUv5Bt5cfXe7LXDGw",
-        authDomain: "music-playlist-d8e60.firebaseapp.com",
-        databaseURL: "https://music-playlist-d8e60.firebaseio.com",
-        projectId: "music-playlist-d8e60",
-        storageBucket: "music-playlist-d8e60.appspot.com",
-        messagingSenderId: "774310292709",
-        appId: "1:774310292709:web:5e270cb8f5f00dcb33380c",
-        measurementId: "G-7WBCW3YCES"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-</script>
 
 </html>
